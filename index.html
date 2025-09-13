@@ -4013,6 +4013,8 @@
      }
     }
 
+  
+
     
   </style>
  
@@ -4099,12 +4101,20 @@
                   <h2 class="hero_heading">QUANTUM ENCRYPTION MEETS REAL-WORLD UTILITY</h2>
                 </div>
                 <div class="logo-container">
-                  <video id="hero_vedio" autoplay muted playsinline
+                  <video id="hero_vedio" class="hero-section-vedio" autoplay muted playsinline
                     style="width:100%; height:100%; object-fit:contain;  transform: scale(1.2);">
                     <source src="cmupdate.webm" type="video/webm">
                     <!-- for browsers that do not support webm -->
 
                   </video>
+                  <style>
+  @media (max-width: 649px) {
+    #hero_vedio {
+      transform: scale(2) !important; 
+      margin-top: 20px !important;/* adjust for small screens */
+    }
+  }
+</style>
                 </div>
 
 
