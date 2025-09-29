@@ -2283,7 +2283,7 @@
     }
 
     .hero_content-wrapper {
-      z-index: 3;
+      z-index: 1;
       grid-column-gap: 2rem;
       grid-row-gap: 2rem;
       perspective: 40rem;
@@ -2294,7 +2294,7 @@
       align-items: center;
       display: flex;
       position: relative;
-      overflow: visible;
+      overflow: hidden;
     }
 
     .container {
@@ -2340,7 +2340,11 @@
     }
 
     .hero_content-bottom {
-      z-index: 2;
+      position: relative;
+  z-index: 9999 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto;
       grid-column-gap: .5rem;
       grid-row-gap: .5rem;
       flex-direction: column;
@@ -2654,7 +2658,8 @@
       height: 80vh;
       position: absolute;
       inset: 25% auto auto 50%;
-      transform: translate(-50%, -50%)
+      transform: translate(-50%, -50%);
+      z-index: 2;
     }
 
     .hero_lottie {
@@ -3046,7 +3051,8 @@
       width: 100%;
       height: 70vh;
       position: absolute;
-      inset: 0% auto auto 0%
+      inset: 0% auto auto 0%;
+      z-index: 2;
     }
 
     .canvas.is-inner {
@@ -3757,19 +3763,33 @@
     .hero_content-wrapper {
       width: 100%;
       height: 100%;
-    }
-
-    .hero_content-top {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
-      margin-top: .5rem;
-      margin-bottom: 2rem;
       overflow: visible;
     }
+.hero_content-top {
+   /* ✅ makes it the reference for absolute video */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: .5rem;
+  margin-bottom: 2rem;
+  z-index: -1;
+  /* overflow: visible; */
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ fills container */
+  z-index: -999; /* ✅ push behind text + logo */
+  overflow: visible;
+}
+
 
     .hero_inner_container {
       display: flex;
@@ -4093,25 +4113,30 @@
 
 
     <main class="content-wrapper">
-      <section class="section is-hero">
+      <section class="section is-hero" >
         <div class="container is-hero">
           <div class="hero_content-wrapper">
+            
             <div class="hero_content-top">
-              <div class="hero_inner_container">
+              <video autoplay muted loop playsinline class="background-video">
+    <source src="quantum.webm" type="video/webm" >
+    Your browser does not support the video tag.
+  </video>
+              <div class="hero_inner_container"> 
                 <div class="heading-container">
                   <h2 class="hero_heading">QUANTUM ENCRYPTION MEETS REAL-WORLD UTILITY</h2>
                 </div>
                 <div class="logo-container">
                   <video id="hero_vedio" class="hero-section-vedio" autoplay muted playsinline
-                    style="width:100%; height:100%; object-fit:contain;  transform: scale(1); border-radius: 10px;">
-                    <source src="quantum.webm" type="video/webm">
-                    <!-- for browsers that do not support webm -->
+                    style="width:100%; height:100%; object-fit:contain;  transform: scale(1); border-radius: 10px; z-index: 0;">
+                    <source src="" type="video/webm">
+              
 
                   </video>
                   <style>
   @media (max-width: 649px) {
     #hero_vedio {
-      transform: scale(2) !important; 
+      transform: scale(1) !important; 
       margin-top: 20px !important;/* adjust for small screens */
     }
   }
@@ -4123,30 +4148,31 @@
 
 
             </div>
-            <div class="hero_content-bottom">
-              <p>Scroll Down</p>
-              <div class="hero_lottie" data-w-id="41748e0b-e75a-7f0f-f252-9fcbe0bc18dc" data-animation-type="lottie"
+            
+          </div>
+        </div>
+        <div class="hero_content-bottom"  >
+              <p >Scroll Down</p>
+              <div class="hero_lottie"  data-w-id="41748e0b-e75a-7f0f-f252-9fcbe0bc18dc" data-animation-type="lottie"
                 data-src="https://cdn.prod.website-files.com/639cdae01920e5582ef8287e/639cdae01920e5f379f8289b_lottieflow-scroll-down-04-1-ffffff-easey.json"
                 data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg"
                 data-default-duration="1.625" data-duration="2">
 
               </div>
             </div>
-          </div>
-        </div>
-        <div class="hero_aurora">
+        <div class="hero_aurora" >
           <div class="hero_aurora-inner"></div>
         </div>
         <div class="hero_aurora is-blured">
           <div class="hero_aurora-inner"></div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 622 705" fill="none" class="hero_light">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 622 705" fill="none" class="hero_light" >
           <path d="M311 0L621.037 704.25H0.962891L311 0Z" fill="currentColor"></path>
         </svg>
-        <canvas id="canvasOne" class="canvas"><canvas id="fireFlies" class="canvas is-inner"></canvas></canvas>
+        <canvas id="canvasOne" class="canvas" ><canvas id="fireFlies" class="canvas is-inner" ></canvas></canvas>
       </section>
 
-      <div class="section">
+      <div class="section" >
         <div class="container">
           <div class="headline-wrapper">
             <div class="overflow-hidden">
@@ -4179,7 +4205,7 @@
           </div>
         </div>
       </div>
-      <div class="section">
+      <div class="section" >
         <div class="container max_width_container">
           <div class="headline-wrapper">
             <div class="vertical-gap-8">
@@ -4238,7 +4264,7 @@
           </div>
         </div>
       </div>
-      <div id="comparison" class="section">
+      <div id="comparison" class="section" >
         <div class="sticky-layout">
           <div class="container petal-container max_width_container">
             <div class="headline-wrapper">
