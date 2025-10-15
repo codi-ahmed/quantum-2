@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- 
+
 
   <title>Quantum</title>
   <Style>
@@ -2302,12 +2302,13 @@
       /* max-width: 90rem; */
       margin-left: auto;
       margin-right: auto;
-      
+
       position: relative
     }
-    .max_width_container{
+
+    .max_width_container {
       max-width: 90rem;
-     padding-left: 6rem;
+      padding-left: 6rem;
       padding-right: 6rem;
     }
 
@@ -2341,10 +2342,10 @@
 
     .hero_content-bottom {
       position: relative;
-  z-index: 9999 !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto;
+      z-index: 9999 !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      pointer-events: auto;
       grid-column-gap: .5rem;
       grid-row-gap: .5rem;
       flex-direction: column;
@@ -2714,7 +2715,7 @@
 
     .hero_content-top {
       will-change: transform;
-      
+
     }
 
     .eyebrow-heading {
@@ -3538,9 +3539,6 @@
         justify-self: center
       }
     }
-
-
-   
   </Style>
   <style>
     html.lenis {
@@ -3765,35 +3763,39 @@
       height: 100%;
       overflow: visible;
     }
-.hero_content-top {
-   /* ✅ makes it the reference for absolute video */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  margin-top: .5rem;
-  margin-bottom: 2rem;
-  z-index: -1;
-  /* overflow: visible; */
-}
 
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* ✅ fills container */
-  z-index: -999; /* ✅ push behind text + logo */
-  overflow: visible;
-}
+    .hero_content-top {
+      /* ✅ makes it the reference for absolute video */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      margin-top: .5rem;
+      margin-bottom: 2rem;
+      z-index: -1;
+      /* overflow: visible; */
+    }
+
+    .background-video {
+      margin-top: 3%;
+      position: absolute;
+      left:50;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* ✅ fills container */
+      z-index: -999;
+      /* ✅ push behind text + logo */
+      overflow: visible;
+    }
 
 
     .hero_inner_container {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       width: 100%;
       justify-content: space-between;
       overflow: visible;
@@ -3807,17 +3809,17 @@
 
     .hero_heading {
       color: #fff;
-      text-align: left;
-      max-width: 65%;
-        }
+      text-align: center;
+      max-width: 900px;
+    }
 
     .heading-container {
-      width: 48%;
+      width: 100%;
       height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
+      overflow: visible;
     }
 
     .logo-container {
@@ -3826,10 +3828,10 @@
       align-items: center;
       height: 65%;
       width: 46%;
-      overflow: visible;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
-   
+      overflow: hidden;
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+
 
 
     }
@@ -3848,7 +3850,7 @@
         justify-content: space-between;
         width: 100%;
         /* gap: 50px; */
-        
+
       }
 
       .heading-container {
@@ -3868,7 +3870,7 @@
         margin-right: 0;
         justify-content: center;
         margin-left: 0;
-   
+
         width: 90%;
       }
 
@@ -3889,9 +3891,10 @@
         padding-bottom: 100px;
         margin-bottom: 500px;
       }
+
       .hero_heading {
         font-size: 24px;
-      
+
       }
     }
 
@@ -3975,8 +3978,8 @@
       }
     }
 
-    @media screen and (max-width: 769px){
-      .p-text{
+    @media screen and (max-width: 769px) {
+      .p-text {
         font-size: 28px;
       }
     }
@@ -3988,57 +3991,54 @@
         min-height: 400px;
       }
 
-      
+
     }
 
     @media screen and (min-width: 1479px) {
-     .logo-container{
-      width: 52%;
-     }
+      .logo-container {
+        width: 52%;
+      }
 
-     .hero_heading{
-      font-size: 54px;
-      margin-top: 10px;
-      min-height: 500px;
-     }
+      .hero_heading {
+        font-size: 54px;
+        margin-top: 10px;
+        min-height: 500px;
+      }
     }
 
     @media screen and (min-width: 1920px) {
-  
 
-     .hero_heading{
-      font-size: 84px;
-     }
+
+      .hero_heading {
+        font-size: 84px;
+      }
     }
-@media screen and (min-width: 2560px) {
-  
 
-     .hero_heading{
-      font-size: 100px;
-     }
+    @media screen and (min-width: 2560px) {
+
+
+      .hero_heading {
+        font-size: 100px;
+      }
     }
 
     @media screen and (min-width: 3000px) {
-  
 
-     .hero_heading{
-      font-size: 120px;
-     }
+
+      .hero_heading {
+        font-size: 120px;
+      }
     }
 
     @media screen and (min-width: 3500px) {
-  
 
-     .hero_heading{
-      font-size: 134px;
-     }
+
+      .hero_heading {
+        font-size: 134px;
+      }
     }
-
-  
-
-    
   </style>
- 
+
 
 
 
@@ -4113,66 +4113,132 @@
 
 
     <main class="content-wrapper">
-      <section class="section is-hero" >
+      <section class="section is-hero">
         <div class="container is-hero">
           <div class="hero_content-wrapper">
-            
+
             <div class="hero_content-top">
-              <!-- <video autoplay muted loop playsinline class="background-video">
-    <source src="" type="video/webm" >
-    Your browser does not support the video tag.
-  </video> -->
-              <div class="hero_inner_container"> 
+              <video autoplay muted loop playsinline class="background-video">
+                <source src="quantum-bg.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
+              
+              <div class="hero_inner_container">
                 <div class="heading-container">
                   <h2 class="hero_heading" style="z-index: 1;">QUANTUM ENCRYPTION MEETS REAL-WORLD UTILITY</h2>
                 </div>
                 <div class="logo-container">
                   <video id="hero_vedio" class="hero-section-vedio" autoplay muted playsinline
                     style="width:100%; height:100%; object-fit:contain;  transform: scale(2); border-radius: 10px; z-index: 0;">
-                    <source src="up-qm.mp4" type="video/webm">
-              
+                    <source src="" type="video/mp4">
+
 
                   </video>
+                 
                   <style>
-  @media (max-width: 649px) {
-    #hero_vedio {
-      transform: scale(2) !important; 
-      margin-top: 20px !important;/* adjust for small screens */
-    }
-  }
-</style>
+                    @media (max-width: 649px) {
+                      #hero_vedio {
+                        transform: scale(2) !important;
+                        margin-top: 20px !important;
+                        /* adjust for small screens */
+                      }
+                    }
+                    @media (min-width: 600px) and (max-width: 1024px) {
+                      .hero_heading{
+                        margin-top: -15%;
+                        font-size: 36px;
+                      }
+                       .background-video{
+                        margin-top: 20%;
+                        height: 80%;
+                      }
+
+                    }
+                     @media (min-width: 990px) and (max-width: 1024px) {
+                      .hero_heading{
+                        margin-top: 5%;
+                        font-size: 36px;
+                        max-width: 70%;
+                      }
+                       .background-video{
+                        margin-top: 20%;
+                        height: 80%;
+                      }
+
+                    }
+                    @media (min-width: 1024px) and (max-width: 1100px) {
+                      .hero_heading{
+                        margin-top: -5%;
+                        
+                      }
+                      .background-video{
+                        margin-top: 20%;
+                        height: 80%;
+                      }
+
+                    }
+                    
+                    @media (min-width: 1100px ) {
+                     .hero_heading{
+                        max-width: 70%;
+                        
+                      }
+                    }
+                    @media (min-width: 1936px ) {
+                      .hero_heading{
+                        max-width: 70%;
+                      }
+                      .background-video{
+                        margin-top: 10%;
+                      }
+                    }
+                    @media (min-width: 1936px ) {
+                      
+                      .background-video{
+                        margin-top: 15%;
+                      }
+                    }
+                    @media (min-width: 2400px ) {
+                      
+                      .background-video{
+                        margin-top: 20%;
+                      }
+                    }
+                  </style>
                 </div>
 
 
               </div>
+              <!-- hero container end  -->
 
 
             </div>
-            
+
           </div>
         </div>
-        <div class="hero_content-bottom"  >
-              <p >Scroll Down</p>
-              <div class="hero_lottie"  data-w-id="41748e0b-e75a-7f0f-f252-9fcbe0bc18dc" data-animation-type="lottie"
-                data-src="https://cdn.prod.website-files.com/639cdae01920e5582ef8287e/639cdae01920e5f379f8289b_lottieflow-scroll-down-04-1-ffffff-easey.json"
-                data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg"
-                data-default-duration="1.625" data-duration="2">
+        <div class="hero_content-bottom">
+          <p>Scroll Down</p>
+          <div class="hero_lottie" data-w-id="41748e0b-e75a-7f0f-f252-9fcbe0bc18dc" data-animation-type="lottie"
+            data-src="https://cdn.prod.website-files.com/639cdae01920e5582ef8287e/639cdae01920e5f379f8289b_lottieflow-scroll-down-04-1-ffffff-easey.json"
+            data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg"
+            data-default-duration="1.625" data-duration="2">
 
-              </div>
-            </div>
-        <div class="hero_aurora" >
+          </div>
+        </div>
+        <div class="hero_aurora">
           <div class="hero_aurora-inner"></div>
         </div>
         <div class="hero_aurora is-blured">
           <div class="hero_aurora-inner"></div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 622 705" fill="none" class="hero_light" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 622 705" fill="none" class="hero_light">
           <path d="M311 0L621.037 704.25H0.962891L311 0Z" fill="currentColor"></path>
         </svg>
-        <canvas id="canvasOne" class="canvas" ><canvas id="fireFlies" class="canvas is-inner" ></canvas></canvas>
+        <canvas id="canvasOne" class="canvas"><canvas id="fireFlies" class="canvas is-inner"></canvas></canvas>
       </section>
 
-      <div class="section" >
+      <div class="section">
         <div class="container">
           <div class="headline-wrapper">
             <div class="overflow-hidden">
@@ -4190,7 +4256,7 @@
                   <h2 data-animation="text-reveal">Q NETWORK</h2>
                 </div>
                 <div class="max-width-720">
-                  <p data-animation="text-reveal" >Q Network is the world’s first fully quantum-encrypted digital
+                  <p data-animation="text-reveal">Q Network is the world’s first fully quantum-encrypted digital
                     ecosystem — where you can store data, stake for returns, communicate privately, and transact
                     securely using our native Q Token.</p>
                 </div>
@@ -4205,7 +4271,7 @@
           </div>
         </div>
       </div>
-      <div class="section" >
+      <div class="section">
         <div class="container max_width_container">
           <div class="headline-wrapper">
             <div class="vertical-gap-8">
@@ -4264,7 +4330,7 @@
           </div>
         </div>
       </div>
-      <div id="comparison" class="section" >
+      <div id="comparison" class="section">
         <div class="sticky-layout">
           <div class="container petal-container max_width_container">
             <div class="headline-wrapper">
@@ -4309,7 +4375,7 @@
                     <p class="petal-text">Keys quantum particles </p>
                     <p class="petal-text">Secure by physics</p>
                     <p class="petal-text">requires quantum </p>
-                    <p class="petal-text">Based on physics 
+                    <p class="petal-text">Based on physics
                     </p>
                   </div>
                 </div>
@@ -4499,9 +4565,9 @@
   <script src="https://cdn.prod.website-files.com/gsap/3.13.0/ScrollTrigger.min.js" type="text/javascript"></script>
   <script src="https://cdn.prod.website-files.com/gsap/3.13.0/SplitText.min.js" type="text/javascript"></script>
   <script type="text/javascript">gsap.registerPlugin(ScrollTrigger, SplitText);</script>
-<script>
+  <script>
 
-</script>
+  </script>
 
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
 
