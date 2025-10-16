@@ -3797,6 +3797,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
+      height: 100vh;
       justify-content: space-between;
       overflow: visible;
     }
@@ -3810,7 +3811,8 @@
     .hero_heading {
       color: #fff;
       text-align: center;
-      max-width: 900px;
+      max-width: 60%;
+
     }
 
     .heading-container {
@@ -3820,6 +3822,7 @@
       justify-content: center;
       align-items: center;
       overflow: visible;
+      
     }
 
     .logo-container {
@@ -4119,7 +4122,7 @@
 
             <div class="hero_content-top">
               <video autoplay muted loop playsinline class="background-video">
-                <source src="quantum-bg.mp4" type="video/mp4">
+                <source src="" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
 
@@ -4136,82 +4139,24 @@
 
                   </video>
                  
-                  <style>
-                    @media (max-width: 649px) {
-                      #hero_vedio {
-                        transform: scale(2) !important;
-                        margin-top: 20px !important;
-                        /* adjust for small screens */
-                      }
-                    }
-                    @media (min-width: 600px) and (max-width: 1024px) {
-                      .hero_heading{
-                        margin-top: -15%;
-                        font-size: 36px;
-                      }
-                       .background-video{
-                        margin-top: 20%;
-                        height: 80%;
-                      }
-
-                    }
-                     @media (min-width: 990px) and (max-width: 1024px) {
-                      .hero_heading{
-                        margin-top: 5%;
-                        font-size: 36px;
-                        max-width: 70%;
-                      }
-                       .background-video{
-                        margin-top: 20%;
-                        height: 80%;
-                      }
-
-                    }
-                    @media (min-width: 1024px) and (max-width: 1100px) {
-                      .hero_heading{
-                        margin-top: -5%;
-                        
-                      }
-                      .background-video{
-                        margin-top: 20%;
-                        height: 80%;
-                      }
-
-                    }
-                    
-                    @media (min-width: 1100px ) {
-                     .hero_heading{
-                        max-width: 70%;
-                        
-                      }
-                    }
-                    @media (min-width: 1936px ) {
-                      .hero_heading{
-                        max-width: 70%;
-                      }
-                      .background-video{
-                        margin-top: 10%;
-                      }
-                    }
-                    @media (min-width: 1936px ) {
-                      
-                      .background-video{
-                        margin-top: 15%;
-                      }
-                    }
-                    
-                    @media (min-width: 2400px ) {
-                      
-                      .background-video{
-                        margin-top: 16%;
-                        height: 40%;
-                        width: 80%;
-                      }
-                    }
-                  </style>
+               
                 </div>
 
-
+                <style>
+                  @media (min-width:990px) {
+                    .heading-container{
+                      margin-top: 20%;
+                    }
+                    
+                   
+                    
+                  }
+                   @media (max-width:990px) {
+                    .heading-container{
+                      margin-top: -20%;
+                    }
+                  }
+                </style>
               </div>
               <!-- hero container end  -->
 
