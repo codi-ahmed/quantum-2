@@ -3798,7 +3798,8 @@
       flex-direction: column;
       width: 100%;
       height: 80vh;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: center;
       overflow: visible;
     }
 
@@ -3817,7 +3818,7 @@
 
     .heading-container {
       width: 100%;
-      height: 100%;
+      height: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -3827,22 +3828,22 @@
 
     .logo-container {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
       height: 65%;
       width: 46%;
       overflow: hidden;
       margin-bottom: 1rem;
       margin-right: 1rem;
-
+      margin-top: -20%;
 
 
     }
-
+/* 
     #hero_vedio {
       align-self: flex-end;
 
-    }
+    } */
 
 
 
@@ -4121,10 +4122,7 @@
           <div class="hero_content-wrapper">
 
             <div class="hero_content-top">
-              <video autoplay muted loop playsinline class="background-video">
-                <source src="" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
+      
 
               
               <div class="hero_inner_container">
@@ -4133,8 +4131,8 @@
                 </div>
                 <div class="logo-container">
                   <video id="hero_vedio" class="hero-section-vedio" autoplay muted playsinline
-                    style="width:100%; height:100%; object-fit:contain;  transform: scale(2); border-radius: 10px; z-index: 0;">
-                    <source src="" type="video/mp4">
+                    style="width:80%; height:100%; object-fit:contain;  transform: scale(1.5); border-radius: 10px; z-index: 0;">
+                    <source src="quantum-bg.mp4" type="video/mp4">
 
 
                   </video>
@@ -4145,17 +4143,16 @@
                 <style>
                   @media (min-width:990px) {
                     .heading-container{
-                      margin-top: 15%;
+                    margin-top: -5%;
                     }
                     
+                    .logo-container{
+                      margin-top: -15%;
+                    }
                    
                     
                   }
-                   @media (max-width:990px) {
-                    .heading-container{
-                      margin-top: -20%;
-                    }
-                  }
+                   
                 </style>
               </div>
               <!-- hero container end  -->
